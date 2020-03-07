@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xe6-iN-9te">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Chords-->
+        <scene sceneID="cWf-Bz-GFP">
+            <objects>
+                <viewController id="sYQ-Af-HHR" customClass="ViewController" customModule="Chords" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sDJ-2C-nec">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EJT-7k-BvJ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="jZu-5o-GXW"/>
+                                </constraints>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Chords" id="rCd-lD-xUG"/>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AvF-ML-aQ9">
+                                <rect key="frame" x="0.0" y="88" width="414" height="410"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="410" id="gZd-tc-PhC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LfA-7h-G9P">
+                                <rect key="frame" x="157" y="506" width="100" height="500"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Ru1-JI-d30"/>
+                                    <constraint firstAttribute="height" constant="500" id="itK-Yy-ZIl"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="sYQ-Af-HHR" id="65L-oM-ERI"/>
+                                    <outlet property="delegate" destination="sYQ-Af-HHR" id="KnH-Nj-fl2"/>
+                                </connections>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HsY-gg-Wm7">
+                                <rect key="frame" x="157" y="406" width="100" height="500"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="500" id="992-JK-saT"/>
+                                    <constraint firstAttribute="width" constant="100" id="cpS-uo-Md1"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="sYQ-Af-HHR" id="M0D-HY-OoL"/>
+                                    <outlet property="delegate" destination="sYQ-Af-HHR" id="Fy9-f3-pMh"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="EJT-7k-BvJ" firstAttribute="leading" secondItem="ZQB-Ub-Zyk" secondAttribute="leading" id="JfU-Sk-PWg"/>
+                            <constraint firstItem="AvF-ML-aQ9" firstAttribute="top" secondItem="EJT-7k-BvJ" secondAttribute="bottom" symbolic="YES" id="OPU-fu-Quc"/>
+                            <constraint firstItem="LfA-7h-G9P" firstAttribute="centerX" secondItem="sDJ-2C-nec" secondAttribute="centerX" id="PUa-7B-s4n"/>
+                            <constraint firstItem="HsY-gg-Wm7" firstAttribute="centerX" secondItem="sDJ-2C-nec" secondAttribute="centerX" id="QcZ-7q-t06"/>
+                            <constraint firstItem="AvF-ML-aQ9" firstAttribute="trailing" secondItem="ZQB-Ub-Zyk" secondAttribute="trailing" id="Tq6-lV-BlB"/>
+                            <constraint firstItem="AvF-ML-aQ9" firstAttribute="leading" secondItem="ZQB-Ub-Zyk" secondAttribute="leading" id="erk-vg-W4s"/>
+                            <constraint firstAttribute="bottom" secondItem="LfA-7h-G9P" secondAttribute="bottom" constant="-110" id="iQd-1R-HOI"/>
+                            <constraint firstAttribute="bottom" secondItem="HsY-gg-Wm7" secondAttribute="bottom" constant="-10" id="m3i-1K-iKz"/>
+                            <constraint firstItem="EJT-7k-BvJ" firstAttribute="top" secondItem="ZQB-Ub-Zyk" secondAttribute="top" id="nFi-Rh-tUa"/>
+                            <constraint firstItem="EJT-7k-BvJ" firstAttribute="trailing" secondItem="ZQB-Ub-Zyk" secondAttribute="trailing" id="r7c-JS-DWm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZQB-Ub-Zyk"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Chords" id="kcz-35-deU"/>
+                    <connections>
+                        <outlet property="labelDescription" destination="AvF-ML-aQ9" id="kId-MU-SUu"/>
+                        <outlet property="navBar" destination="EJT-7k-BvJ" id="H8r-mX-a1H"/>
+                        <outlet property="pickerChords" destination="LfA-7h-G9P" id="P0Y-r1-eEu"/>
+                        <outlet property="pickerKeysNames" destination="HsY-gg-Wm7" id="YYA-4p-jFQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K20-kJ-jsC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="15.942028985507248" y="54.910714285714285"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Ucb-sh-CMN">
+            <objects>
+                <tabBarController id="Xe6-iN-9te" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Vax-Ie-fvz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="sYQ-Af-HHR" kind="relationship" relationship="viewControllers" id="GFv-rl-6W0"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YCb-oT-xKX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1164" y="55"/>
+        </scene>
+    </scenes>
+</document>
